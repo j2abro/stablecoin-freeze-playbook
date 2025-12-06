@@ -1,0 +1,23 @@
+# --- macOS ---
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# --- Windows (Good practice for collaborators) ---
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# --- Common Editors (VS Code, JetBrains, Vim, Sublime) ---
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+*.sublime-workspace
+
+# --- Misc ---
+*.log
