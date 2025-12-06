@@ -2,6 +2,17 @@
 How-to guide to freeze stablecoins
 
 
+## Act Quick
+One benefit of stablecoins is that they often provide an centralized security overlay ontop of otherwise decentralized networks. However, attackers will often prioritize moving assets out of freezable stablecoins befire their account gets locked out.
+
+## Verify Freezability
+Are my tokens freezable? The first step is to determin if the token contract enables freezing. If you're unsure, check the table below for some top stablecoins, to determine if they are freeze capable. If yes, continue on to next step.
+
+## Verify Native Asset
+While stablecoins are often deployed on multiple chains, only stablecoins minted on a particular chain by the official issuer can be frozen, whereas some tokens bridged and wrapped will likely not be freeze caapble. Check the smart contract address of your tokens to verify they are freezable. Official contract addresses for some stablecoins are shown in the Kay Native Contracts colum of the stablecoin registry.
+
+
+
 
 
 
