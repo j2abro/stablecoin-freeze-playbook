@@ -1,16 +1,14 @@
 # stablecoin-freeze-playbook
-How-to guide to freeze stablecoins before they are laundered. Organizations should create their own playbook tailored to their specific risk profile and asset holdings, but this should provide a head start.
+How-to guide to freeze stolen stablecoins before they are laundered. One benefit of stablecoins is that they can provide a centralized security overlay on top of otherwise decentralized networks. Organizations should create their own playbook tailored to their specific risk profile and asset holdings to quickly react to asset theft, but this guide should provide a head start. 
 
-## 1. Act Quick
-Time is critical as attackers will prioritize swapping of freezable stablecoins into immutable assets and move through mix for anonimity. If funds have been swapped to a decentralized asset such as ETH, a mixer (Tornado Cash), or bridged to a non-native chain, the issuer likely cannot help you.
-
-One benefit of stablecoins is that they often provide an centralized security overlay ontop of otherwise decentralized networks. 
+## 1. Act Quickly
+*Time is critical* as attackers will prioritize swapping of freezable stablecoins into immutable assets and move assets through mixer for anonymity. If funds have been swapped to a decentralized asset such as ETH, a mixer (Tornado Cash), or bridged to a non-native chain, the issuer likely cannot help you. 
 
 ## 2. Verify Freezability
-Are my tokens freezable? The first step is to determin if the token contract enables freezing. If you're unsure, check the table below for some top stablecoins, to determine if they are freeze capable. Many stablecoins implement freeze functionality for regulatory and sanctions compliance. The U.S. [Genius Act](https://www.federalregister.gov/documents/2025/09/19/2025-18226/genius-act-implementation) (signed July 18, 2025) which creates a regulatory framework for stablecoins - while rules are still being finalized - freeze capability for stablecoins is required when ordered by a lawful authority, so if a stablecoin advertizes Genius Act compliance they are probably freexabe.
+*Are my tokens freezable?* The first step is to determine if the token contract enables freezing. If you're unsure, check the table below for some top stablecoins, to determine if they are freeze capable. Many stablecoins implement freeze functionality for regulatory and sanctions compliance. The U.S. [Genius Act](https://www.federalregister.gov/documents/2025/09/19/2025-18226/genius-act-implementation) (signed July 18, 2025) which creates a regulatory framework for stablecoins - while rules are still being finalized - freeze capability for stablecoins is required when ordered by a lawful authority, so if a stablecoin advertises Genius Act compliance they are probably freezable.
 
 - Check the Issuer Terms & Conditions
-Freezability is generaly stated in policy; for example stablecoins by Paxos (USDG, PYUSD, USDP, PAXG) and Circle (USDC) are freezable as defined in their T&Cs.
+Freezability is generally stated in policy; for example stablecoins by Paxos (USDG, PYUSD, USDP, PAXG) and Circle (USDC) are freezable as defined in their T&Cs.
 
 - Check the Contract
 For example USDC contract, the freeze functionality is evident by reviewing the [contract](https://etherscan.io/token/0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48#readProxyContract) source code - I described how that works in [this post](https://medium.com/@j2abro/circle-usdc-blacklist-implementation-8a7bab143a93).
@@ -19,10 +17,10 @@ For example USDC contract, the freeze functionality is evident by reviewing the 
 This is a relatively new space and I don't know of any defininitive list, but I have included freeze support for some of the top tokens in the table below. Note that decentralized tokens such as DAI and FRAX cannot be frozen.
 
 - Verify "Native" vs "Bridged"
-Native tokens minted directly on a particular chain (where freezing is supported) can be frozen. However, bridged tokens that result in a "wrapped" asset cannot be frozen by the stablecoin issuer - if that is possible, that request would have to be taken up with the controler of the bridge, chain or validators which would be more challenging or impossible to freeze. Check the smart contract source to confirm that the token is in fact minted by the issuer, or check that the contract addresses exists in the table below.
+Native tokens minted directly on a particular chain (where freezing is supported) can be frozen. However, bridged tokens that result in a "wrapped" asset cannot be frozen by the stablecoin issuer - if that is possible, that request would have to be taken up with the controller of the bridge, chain or validators which would be more challenging or impossible to freeze. Check the smart contract source to confirm that the token is in fact minted by the issuer, or check that the contract addresses exists in the table below.
 
 ## 3. Freeze Request
-Freeze requests will likely require a law enforcement action, so reach out to the issuer and also, in parallel. Note that freezes can take time - expect 24-72 hours for initial review. Privacy: Issuers will not reveal the identity of the attacker wallet owner without a subpoena.
+*Freeze requests will likely require a law enforcement action (LE)*, so reach out to the issuer and also LE in parallel. Note that freezes can take days to implement. Don't expect issuers to necessarily reveal the identity of the attacker.
 
 - Law Enforcement Case
 File an official report as issuers such as Circle and Tether typically require a law enforcement case number before initiating any freeze. OFAC sanctions are also generally adhered to.
@@ -48,22 +46,21 @@ Send a formal notice to the issuer's compliance team.
 
 ### 3. Paxos (USDG, PYUSD, USDP, PAXG)
 - **Policy Page:** [Paxos Illegal Activity Policy](https://www.paxos.com/terms-and-conditions/illegal-activity)
-    - *Capability:* Explicitly states ability to "freeze" and "wipe" (burn) assets upon legal directive.
-- **Jurisdiction:** United States (NYDFS Regulated).
-- **Standard:** Requires valid legal process (Subpoena, Court Order, or National Security Letter).
+- **Jurisdiction:** Each token is unique - generally United States (NYDFS Regulated), but some are issued in other jurisdictions.
+- **Standard:** Generally requires order from recognized legal authority.
 - **Contact Email:** `subpoenas@paxos.com`, `compliance@paxos.com`
-- **Support Form:** 
-
+- **Support Form:** [Support center](https://support.paxos.com/hc/en-us)
 
 ## Forensic Evidence
 When submitting your request, do not just send a transaction hash. Provide forensic analysis to speed up their internal review. Be sure to include:
 
-- Attestation of Ownership: Proof the source wallet belongs to the victim (signed message or exchange KYC record).
+- Attestation of Ownership: Proof that the source wallet belongs to the victim.
 - Incident Timeline: Precise UTC timestamps of the hack.
 - Flow Visual: A link to a visual trace (e.g., Etherscan, Arkham, or MetaSleuth) showing asset movement.
-- Current Location: Explicitly state: "The funds are currently sitting in Address X on Chain Y."
+- Current Location: Explicitly state the location of the stablecoins, including  the chain and address.
 
-## Stablecoin Registry (selected by prevalance)
+## Stablecoin Registry (selected tokens)
+Each team should have a reference table such as this for any asset they hold.
 
 | Symbol | Name | Type | Compliance Status | Freeze Capable | Key Native Contracts |
 | :--- | :--- | :--- | :--- | :---: | :--- |
@@ -90,13 +87,13 @@ When submitting your request, do not just send a transaction hash. Provide foren
 - [Visa Stablecoin Analytics](https://visaonchainanalytics.com/)
 
 ### Freeze News
-- [Tetner blog post freeze news](https://tether.io/news/tether-recognized-for-assisting-the-united-states-secret-service-in-23m-freeze-related-to-transfers-on-sanctioned-exchange-garantex/)
+- [Tether blog post freeze news](https://tether.io/news/tether-recognized-for-assisting-the-united-states-secret-service-in-23m-freeze-related-to-transfers-on-sanctioned-exchange-garantex/)
 - [Paxos freezes FTX related tokens](https://www.paxos.com/blog/paxos-freezes-paxg-tokens-related-to-ftx)
 - [Circle freezes Libra scandal wallets on Solana](https://decrypt.co/322558/circle-freezes-58-million-usdc-solana-wallets-libra-scandal)
 
 ### Terms and Conditions
 - [Paxos Terms & Conditions](https://www.paxos.com/terms-and-conditions/illegal-activity) and [Illegal Activity](https://www.paxos.com/terms-and-conditions/illegal-activity)
-- [Circle Stablecoin Access Deny Policy](https://6778953.fs1.hubspotusercontent-na1.net/hubfs/6778953/Blog%20Posts/Circle%20Stablecoin%20Access%20Denial%20Policy_pdf.pdf)
+- [Circle Stablecoin Access Deny Policy](https://6778953.fs1.hubspotusercontent-na1.net/hubfs/6778953/Circle%20Stablecoin%20Access%20Denial%20Policy_pdf.pdf)
 - [Tether freeze terms](https://tether.to/en/legal/?tab=terms-of-service)
 
 ### Contact Addresses
@@ -104,7 +101,7 @@ When submitting your request, do not just send a transaction hash. Provide foren
 - Paxos support form: https://support.paxos.com/hc/en-us/requests/new
 
 ### Tools
-Many tools exist to track and visualize token acitivity. Here are some examples:
+Many tools exist to track and visualize token activity. Here are some examples:
 - [MetaSleuth](https://metasleuth.io/)
 - [Arkham Intel](https://intel.arkm.com/)
 
