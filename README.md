@@ -1,5 +1,5 @@
 # stablecoin-freeze-playbook
-How-to guide to freeze stablecoins before they are laundered
+How-to guide to freeze stablecoins before they are laundered. Organizations should create their own playbook tailored to their specific risk profile and asset holdings, but this should provide a head start.
 
 ## 1. Act Quick
 Time is critical as attackers will prioritize swapping of freezable stablecoins into immutable assets and move through mix for anonimity. If funds have been swapped to a decentralized asset such as ETH, a mixer (Tornado Cash), or bridged to a non-native chain, the issuer likely cannot help you.
@@ -25,48 +25,34 @@ Native tokens minted directly on a particular chain (where freezing is supported
 Freeze requests will likely require a law enforcement action, so reach out to the issuer and also, in parallel. Note that freezes can take time - expect 24-72 hours for initial review. Privacy: Issuers will not reveal the identity of the attacker wallet owner without a subpoena.
 
 - Law Enforcement Case
-File an official report as issuers such as Circle and Tether typically require a law enforcement case number before initiating any freez. 
-*Examples*:
-    - US (FBI): File an IC3 Complaint
-    - Local Police: File a report and get a case number
-    - Sanctions: If the attacker is a known entity (e.g., Lazarus Group), report to OFAC immediately.
+File an official report as issuers such as Circle and Tether typically require a law enforcement case number before initiating any freeze. OFAC sanctions are also generally adhered to.
 
 - Contact the Issuer
 Send a formal notice to the issuer's compliance team. 
 
 
 ### 1. Circle (USDC)
-* **Jurisdiction:** United States (Regulated).
-* **Standard:** **Strict.** Generally requires a U.S. Court Order or Seizure Warrant. They rarely act on simple email requests unless there is a clear National Security or OFAC angle.
-* **Primary Contact:** `compliance@circle.com`
-* **Legal Policy:** [Circle Legal Terms (Section 23)](https://www.circle.com/en/legal/usdc-terms)
-* **Support Form:** [Circle Support Center](https://help.circle.com/s/contactsupport)
+- **Policy:** [Circle Legal Terms](https://www.circle.com/en/legal/usdc-terms) and [Access Deny Policy](https://6778953.fs1.hubspotusercontent-na1.net/hubfs/6778953/Blog%20Posts/Circle%20Stablecoin%20Access%20Denial%20Policy_pdf.pdf)
+- **Jurisdiction:** United States (Governing law for freezing).
+- **Standard:** Generally requires order from recognized U.S. legal authority.
+- **Contact Email:** `compliance@circle.com`
+
+- **Support Form:** [Circle help center](https://help.circle.com/s/) and [ticket portal](https://help.circle.com/s/submit-ticket)
 
 ### 2. Tether (USDT)
-* **Jurisdiction:** British Virgin Islands (Offshore).
-* **Standard:** **Discretionary.** They can and do freeze based on detailed victim reports/police reports, even before a court order, if evidence is strong. They also freeze strictly on OFAC lists.
-* **Primary Contact:** `inforequests@tether.to` (Dedicated Law Enforcement/Legal inbox).
-* **Policy Page:** [Tether Law Enforcement Policy](https://tether.to/en/legal/?tab=law-enforcement-requests)
-* **Recovery Form:** [Tether Dispute & Recovery](https://cs.tether.to/)
-    * *Action:* Tether generally "burns" the frozen tokens and "re-mints" them to the victim or LE wallet.
+- **Policy:** [Tether LE Policy](https://tether.to/en/legal/?tab=law-enforcement-requests) and [freeze terms](https://tether.to/en/legal/?tab=terms-of-service)
+- **Jurisdiction:** British Virgin Islands (Offshore, but they cooperate with U.S. regulatory agencies).
+- **Standard:** Generally requires order from recognized legal authority.
+- **Contact Email:** `inforequests@tether.to` (Law Enforcement/Legal inbox).
+- **Support Form:** [Tether Dispute & Recovery](https://cs.tether.to/)
 
 ### 3. Paxos (USDG, PYUSD, USDP, PAXG)
-* **Jurisdiction:** United States (NYDFS Regulated).
-* **Standard:** **Strict.** Requires valid legal process (Subpoena, Court Order, or National Security Letter).
-* **Primary Contact:** `subpoenas@paxos.com`
-* **General Compliance:** `compliance@paxos.com`
-* **Policy Page:** [Paxos Illegal Activity Policy](https://www.paxos.com/terms-and-conditions/illegal-activity)
-    * *Capability:* Explicitly states ability to "freeze" and "wipe" (burn) assets upon legal directive.
-
----
-
-### 📋 Quick Reference Table
-
-| Issuer | Token | Freeze Contact | Policy Documentation |
-| :--- | :--- | :--- | :--- |
-| **Circle** | USDC | `compliance@circle.com` | [Circle Legal Terms](https://www.circle.com/en/legal/usdc-terms) |
-| **Tether** | USDT | `inforequests@tether.to` | [Tether LE Policy](https://tether.to/en/legal/?tab=law-enforcement-requests) |
-| **Paxos** | PYUSD | `subpoenas@paxos.com` | [Paxos Seizure Policy](https://www.paxos.com/terms-and-conditions/illegal-activity) |
+- **Policy Page:** [Paxos Illegal Activity Policy](https://www.paxos.com/terms-and-conditions/illegal-activity)
+    - *Capability:* Explicitly states ability to "freeze" and "wipe" (burn) assets upon legal directive.
+- **Jurisdiction:** United States (NYDFS Regulated).
+- **Standard:** Requires valid legal process (Subpoena, Court Order, or National Security Letter).
+- **Contact Email:** `subpoenas@paxos.com`, `compliance@paxos.com`
+- **Support Form:** 
 
 
 ## Forensic Evidence
@@ -96,27 +82,31 @@ When submitting your request, do not just send a transaction hash. Provide foren
 ## Reference
 
 ### Stablecoin Lists
- - [CoinGecko](https://www.coingecko.com/en/categories/stablecoins)
- - [CoinMarketCap](https://coinmarketcap.com/view/usd-stablecoin/)
- - [Artemis](https://app.artemisanalytics.com/stablecoins)
- - [Kraken](https://www.kraken.com/categories/stablecoins)
- - [Forbes](https://www.forbes.com/digital-assets/categories/stablecoins/)
- - [Visa Stablecoin Analytics](https://visaonchainanalytics.com/)
+- [CoinGecko](https://www.coingecko.com/en/categories/stablecoins)
+- [CoinMarketCap](https://coinmarketcap.com/view/usd-stablecoin/)
+- [Artemis](https://app.artemisanalytics.com/stablecoins)
+- [Kraken](https://www.kraken.com/categories/stablecoins)
+- [Forbes](https://www.forbes.com/digital-assets/categories/stablecoins/)
+- [Visa Stablecoin Analytics](https://visaonchainanalytics.com/)
 
 ### Freeze News
- - [Tetner blog post freeze news](https://tether.io/news/tether-recognized-for-assisting-the-united-states-secret-service-in-23m-freeze-related-to-transfers-on-sanctioned-exchange-garantex/)
- - [Paxos freezes FTX related tokens](https://www.paxos.com/blog/paxos-freezes-paxg-tokens-related-to-ftx)
+- [Tetner blog post freeze news](https://tether.io/news/tether-recognized-for-assisting-the-united-states-secret-service-in-23m-freeze-related-to-transfers-on-sanctioned-exchange-garantex/)
+- [Paxos freezes FTX related tokens](https://www.paxos.com/blog/paxos-freezes-paxg-tokens-related-to-ftx)
+- [Circle freezes Libra scandal wallets on Solana](https://decrypt.co/322558/circle-freezes-58-million-usdc-solana-wallets-libra-scandal)
 
 ### Terms and Conditions
- - [Paxos Terms & Conditions](https://www.paxos.com/terms-and-conditions/illegal-activity) and [Illegal Activity](https://www.paxos.com/terms-and-conditions/illegal-activity)
- - [Circle Stablecoin Access Deny Policy](https://6778953.fs1.hubspotusercontent-na1.net/hubfs/6778953/Blog%20Posts/Circle%20Stablecoin%20Access%20Denial%20Policy_pdf.pdf)
+- [Paxos Terms & Conditions](https://www.paxos.com/terms-and-conditions/illegal-activity) and [Illegal Activity](https://www.paxos.com/terms-and-conditions/illegal-activity)
+- [Circle Stablecoin Access Deny Policy](https://6778953.fs1.hubspotusercontent-na1.net/hubfs/6778953/Blog%20Posts/Circle%20Stablecoin%20Access%20Denial%20Policy_pdf.pdf)
+- [Tether freeze terms](https://tether.to/en/legal/?tab=terms-of-service)
 
 ### Contact Addresses
- - Paxos law enforcement: subpoenas@paxos.com
- - Paxos support form: https://support.paxos.com/hc/en-us/requests/new
+- Paxos law enforcement: subpoenas@paxos.com
+- Paxos support form: https://support.paxos.com/hc/en-us/requests/new
 
 ### Tools
+Many tools exist to track and visualize token acitivity. Here are some examples:
 - [MetaSleuth](https://metasleuth.io/)
+- [Arkham Intel](https://intel.arkm.com/)
 
 
- Disclaimer: This playbook is for educational and informational purposes only. It does not constitute legal advice. Always consult with qualified legal counsel for asset recovery operations.
+Disclaimer: This playbook is for educational and informational purposes to help promote and support the creation of internal playbooks by crypto teams. It does not constitute legal advice. Always consult with qualified legal counsel for asset recovery operations.
