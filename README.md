@@ -34,7 +34,6 @@ Send a formal notice to the issuer's compliance team.
 - **Jurisdiction:** United States (Governing law for freezing).
 - **Standard:** Generally requires order from recognized U.S. legal authority.
 - **Contact Email:** `compliance@circle.com`
-
 - **Support Form:** [Circle help center](https://help.circle.com/s/) and [ticket portal](https://help.circle.com/s/submit-ticket)
 
 ### 2. Tether (USDT)
